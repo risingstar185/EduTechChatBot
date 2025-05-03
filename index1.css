@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f2f1f6, #d9e4f5);
+  color: #333;
+  line-height: 1.6;
+  animation: fadeInBody 1s ease-in;
+}
+
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #5b21b6;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  animation: slideDown 0.8s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #9333ea, #7c3aed);
+  color: white;
+  animation: fadeUp 1s ease-in-out;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.start-chat-btn {
+  background: #f59e0b;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.start-chat-btn:hover {
+  background: #d97706;
+}
+
+.about {
+  height: 400px;
+  padding: 3rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.chat-preview {
+  padding: 3rem 2rem;
+  background-color: #f9fafb;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+footer {
+  margin-top: 0px;
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #1e293b;
+  color: white;
+  font-size: 0.95rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    position: sticky;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .start-chat-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 1.5rem;
+    position: sticky;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .about {
+    padding: 2rem 1.5rem;
+    height: auto;
+  }
+
+  .about p {
+    font-size: 1.05rem;
+  }
+
+  .chat-preview {
+    padding: 2rem 1.5rem;
+  }
+}
