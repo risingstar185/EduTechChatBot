@@ -96,29 +96,49 @@ nav ul li a:hover {
   margin-bottom: 2rem;
 }
 
-.start-chat-btn {
+img{
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  border: 5px solid blueviolet;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -100px;
+  animation: fadeUp 1s ease-in-out;
+}
+img:hover{
+transform: scale(1.03);
+box-shadow: rgb(55, 90, 179);
+}
+
+#about .start-chat-btn {
+
   background: #f59e0b;
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 3rem;
   border-radius: 30px;
   text-decoration: none;
   font-size: 1rem;
   transition: background 0.3s ease;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -100px;
 }
-
-.start-chat-btn:hover {
+ .start-chat-btn:hover {
+  transform: scale(1.03);
   background: #d97706;
 }
 
 .about {
   height: 400px;
   padding: 3rem 2rem;
-  background-color: #fff;
+  background-color:rgb(222, 240, 240);
   text-align: center;
   animation: fadeUp 1.2s ease-in-out;
 }
 
 .about h2 {
+  padding: 20px;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -163,7 +183,8 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
-    position: sticky;
+    position: fixed;
+ 
   }
 
   nav .logo {
@@ -175,6 +196,7 @@ footer {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    display: none;
   }
 
   nav ul li a {
@@ -216,16 +238,23 @@ footer {
 /* Tablets (481px to 768px) */
 @media (max-width: 768px) {
   nav {
-    padding: 1rem 1.5rem;
-    position: sticky;
+    width: 100%;
+    padding: .8rem 1.5rem;
+    position: fixed;
+
   }
 
   nav ul {
     gap: 1rem;
+    display: none;
   }
 
   .hero {
-    padding: 3rem 1.5rem;
+    padding: 7rem 1.5rem;
+    height: 300px;
+  }
+  #start-chat-btn{
+   margin-top: 100px;
   }
 
   .hero h1 {
@@ -237,13 +266,17 @@ footer {
   }
 
   .about {
-    padding: 2rem 1.5rem;
-    height: auto;
+    padding: 3rem 1.5rem;
+    height: 700px;
   }
 
+.about h2{
+  padding-top: 50px;
+}
   .about p {
     font-size: 1.05rem;
   }
+
 
   .chat-preview {
     padding: 2rem 1.5rem;
